@@ -6,7 +6,7 @@ Este projeto é um sistema de controle de pedidos desenvolvido em Delphi, utiliz
 
 Este projeto foi construído com as seguintes tecnologias e conceitos de arquitetura:
 
-* **Linguagem de Programação:** Delphi (versão [colocar a versão do Delphi, ex: 11 Alexandria])
+* **Linguagem de Programação:** Delphi (versão 11)
 * **Banco de Dados:** SQLite
 * **Framework de Acesso a Dados:** FireDAC
 * **Arquitetura:** Aplicação em camadas, seguindo o padrão MVC (Model-View-Controller).
