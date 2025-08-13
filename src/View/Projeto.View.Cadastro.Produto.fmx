@@ -1,0 +1,350 @@
+inherited ViewCadastroProduto: TViewCadastroProduto
+  BorderStyle = Single
+  Caption = 'Cadastro'
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  inherited layPrincipal: TLayout
+    inherited TabControl: TTabControl
+      TabIndex = 1
+      Sizes = (
+        823s
+        667s
+        823s
+        667s)
+      inherited tabPainel: TTabItem
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        inherited lay_tela_consulta: TLayout
+          inherited Layout2: TLayout
+            inherited Layout3: TLayout
+              inherited lblTitulo: TLabel
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Produtos'
+              end
+            end
+            inherited Layout4: TLayout
+              inherited Rectangle1: TRectangle
+                inherited edtBusca: TEdit
+                  TextPrompt = 'Buscar por C'#243'digo ou Descri'#231#227'o'
+                  inherited ClearEditButton1: TClearEditButton
+                    OnClick = ClearEditButton1Click
+                  end
+                  inherited SearchEditButton1: TSearchEditButton
+                    OnClick = SearchEditButton1Click
+                  end
+                end
+              end
+            end
+            inherited Layout5: TLayout
+              inherited rect_novo: TRectangle
+                OnClick = rect_novoClick
+                inherited Label2: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+            end
+          end
+          inherited Layout1: TLayout
+            inherited Rectangle3: TRectangle
+              inherited lblQtdeItens: TLabel
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+            end
+          end
+          inherited Layout6: TLayout
+            inherited ListBoxPrincipal: TListBox
+              Size.Height = 500.000000000000000000
+              Viewport.Width = 799.000000000000000000
+              Viewport.Height = 500.000000000000000000
+            end
+            object TLayout
+              StyleName = 'StyleItemProdutos'
+              Align = Top
+              Margins.Left = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Size.Width = 803.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 60
+              object TRectangle
+                StyleName = 'StyleFundo'
+                Align = Contents
+                Fill.Color = xFFF2F2F2
+                HitTest = False
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Size.Width = 793.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                XRadius = 5.000000000000000000
+                YRadius = 5.000000000000000000
+              end
+              object TLayout
+                StyleName = 'StylePrincipal'
+                Align = Client
+                Margins.Left = 7.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 7.000000000000000000
+                Margins.Bottom = 7.000000000000000000
+                Size.Width = 789.000000000000000000
+                Size.Height = 36.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object TLayout
+                  StyleName = 'layCodigo'
+                  Align = Left
+                  Size.Width = 109.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 2
+                  object TLabel
+                    StyleName = 'lblCodigo'
+                    Align = Client
+                    Size.Width = 109.000000000000000000
+                    Size.Height = 36.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 0
+                    object TLabel
+                      StyleName = 'lblCodigo'
+                      Align = Client
+                      StyledSettings = [Family, FontColor]
+                      Size.Width = 109.000000000000000000
+                      Size.Height = 36.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 14.000000000000000000
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      Text = 'C'#243'digo'
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object TLayout
+                  StyleName = 'layVlrVenda'
+                  Align = Right
+                  Position.X = 509.000000000000000000
+                  Size.Width = 130.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object TLabel
+                    StyleName = 'lblVlrVenda'
+                    Align = Client
+                    Size.Width = 130.000000000000000000
+                    Size.Height = 36.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 0
+                    object TLabel
+                      StyleName = 'lblNome'
+                      Align = Client
+                      StyledSettings = [Family, FontColor]
+                      Size.Width = 130.000000000000000000
+                      Size.Height = 36.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 14.000000000000000000
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      Text = 'Valor de Venda'
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object TLayout
+                  StyleName = 'layDescricao'
+                  Align = Client
+                  Size.Width = 400.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object TLabel
+                    StyleName = 'lblDescricao'
+                    Align = Client
+                    Size.Width = 400.000000000000000000
+                    Size.Height = 36.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 0
+                    object TLabel
+                      StyleName = 'lblNome'
+                      Align = Client
+                      StyledSettings = [Family, FontColor]
+                      Size.Width = 400.000000000000000000
+                      Size.Height = 36.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 14.000000000000000000
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      Text = 'Descri'#231#227'o'
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object TLayout
+                  StyleName = 'layBotoes'
+                  Align = Right
+                  Position.X = 639.000000000000000000
+                  Size.Width = 150.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 4
+                  object TLabel
+                    StyleName = 'lblUF'
+                    Align = Client
+                    StyledSettings = [Family, FontColor]
+                    Size.Width = 150.000000000000000000
+                    Size.Height = 36.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 14.000000000000000000
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    Text = 'A'#231#245'es'
+                    TabOrder = 0
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+      inherited tabCadastro: TTabItem
+        IsSelected = True
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        inherited lay_cadastro_principal: TLayout
+          inherited Rectangle2: TRectangle
+            inherited Rectangle4: TRectangle
+              inherited Layout8: TLayout
+                object Layout13: TLayout
+                  Align = Top
+                  Position.Y = 71.000000000000000000
+                  Size.Width = 719.000000000000000000
+                  Size.Height = 71.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object Label3: TLabel
+                    Align = Top
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Position.X = 10.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 699.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'Descri'#231#227'o'
+                    TabOrder = 1
+                  end
+                  object Rectangle6: TRectangle
+                    Align = Client
+                    Enabled = False
+                    Fill.Color = claWhite
+                    HitTest = False
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 3.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 3.000000000000000000
+                    Size.Width = 699.000000000000000000
+                    Size.Height = 43.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFFC1C1C1
+                    XRadius = 5.000000000000000000
+                    YRadius = 5.000000000000000000
+                  end
+                  object edtDescricao: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    StyleLookup = 'Edit1Style1'
+                    TabOrder = 0
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 699.000000000000000000
+                    Size.Height = 39.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Digite aqui nome do seu produto'
+                    CharCase = ecUpperCase
+                  end
+                end
+                object Layout15: TLayout
+                  Align = Top
+                  Position.Y = 142.000000000000000000
+                  Size.Width = 719.000000000000000000
+                  Size.Height = 71.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 2
+                  object Label7: TLabel
+                    Align = Top
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Position.X = 10.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 699.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'Valor de Venda do Produto'
+                    TabOrder = 1
+                  end
+                  object Rectangle7: TRectangle
+                    Align = Client
+                    Enabled = False
+                    Fill.Color = claWhite
+                    HitTest = False
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 3.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 3.000000000000000000
+                    Size.Width = 699.000000000000000000
+                    Size.Height = 43.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFFC1C1C1
+                    XRadius = 5.000000000000000000
+                    YRadius = 5.000000000000000000
+                  end
+                  object edtVlrVenda: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    StyleLookup = 'Edit1Style1'
+                    TabOrder = 0
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 699.000000000000000000
+                    Size.Height = 39.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Digita aqui qual sera valor do seu produto. Ex: 9,99'
+                  end
+                end
+              end
+              inherited Layout11: TLayout
+                inherited Layout14: TLayout
+                  inherited rect_gravar: TRectangle
+                    OnClick = rect_gravarClick
+                    inherited Label6: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+                inherited Layout12: TLayout
+                  inherited rect_voltar: TRectangle
+                    OnClick = rect_voltarClick
+                    inherited Label5: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+              inherited Layout9: TLayout
+                inherited Label4: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,447 @@
+inherited ViewCadastroCliente: TViewCadastroCliente
+  BorderStyle = Single
+  Caption = 'Cadastro'
+  ClientHeight = 720
+  ClientWidth = 861
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  inherited layPrincipal: TLayout
+    Size.Width = 861.000000000000000000
+    Size.Height = 720.000000000000000000
+    inherited rect_fundo_principal: TRectangle
+      Size.Width = 861.000000000000000000
+      Size.Height = 720.000000000000000000
+    end
+    inherited TabControl: TTabControl
+      Size.Width = 837.000000000000000000
+      Size.Height = 696.000000000000000000
+      TabIndex = 0
+      Sizes = (
+        837s
+        696s
+        837s
+        696s)
+      inherited tabPainel: TTabItem
+        IsSelected = True
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        inherited lay_tela_consulta: TLayout
+          Size.Width = 827.000000000000000000
+          Size.Height = 686.000000000000000000
+          inherited rect_fundo_tela: TRectangle
+            HitTest = False
+            Margins.Left = -5.000000000000000000
+            Margins.Top = -5.000000000000000000
+            Margins.Right = -5.000000000000000000
+            Margins.Bottom = -5.000000000000000000
+            Size.Width = 837.000000000000000000
+            Size.Height = 696.000000000000000000
+          end
+          inherited Layout2: TLayout
+            Size.Width = 827.000000000000000000
+            inherited Layout3: TLayout
+              inherited lblTitulo: TLabel
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Clientes'
+              end
+            end
+            inherited Layout4: TLayout
+              Size.Width = 378.000000000000000000
+              inherited Rectangle1: TRectangle
+                Size.Width = 372.000000000000000000
+                inherited edtBusca: TEdit
+                  Size.Width = 362.000000000000000000
+                  TextPrompt = 'Buscar por C'#243'digo ou Nome do Cliente'
+                  inherited ClearEditButton1: TClearEditButton
+                    OnClick = ClearEditButton1Click
+                  end
+                  inherited SearchEditButton1: TSearchEditButton
+                    OnClick = SearchEditButton1Click
+                  end
+                end
+              end
+            end
+            inherited Layout5: TLayout
+              Position.X = 659.000000000000000000
+              inherited rect_novo: TRectangle
+                OnClick = rect_novoClick
+                inherited Label2: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+            end
+          end
+          inherited Layout1: TLayout
+            Position.Y = 636.000000000000000000
+            Size.Width = 827.000000000000000000
+            inherited Rectangle3: TRectangle
+              Size.Width = 827.000000000000000000
+              inherited lblQtdeItens: TLabel
+                Size.Width = 827.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+            end
+          end
+          inherited Layout6: TLayout
+            Size.Width = 827.000000000000000000
+            Size.Height = 586.000000000000000000
+            inherited ListBoxPrincipal: TListBox
+              Size.Width = 813.000000000000000000
+              Size.Height = 532.000000000000000000
+              DefaultItemStyles.ItemStyle = 'StyleItemClientes'
+              Viewport.Width = 813.000000000000000000
+              Viewport.Height = 532.000000000000000000
+            end
+            object TLayout
+              StyleName = 'StylePrincipal'
+              Align = Top
+              Margins.Left = 10.000000000000000000
+              Margins.Top = 7.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Position.X = 10.000000000000000000
+              Position.Y = 7.000000000000000000
+              Size.Width = 807.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object Rectangle9: TRectangle
+                Align = Contents
+                Fill.Color = xFFEDEDED
+                Size.Width = 807.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                XRadius = 5.000000000000000000
+                YRadius = 5.000000000000000000
+              end
+              object TLayout
+                StyleName = 'layCodigo'
+                Align = Left
+                Margins.Left = 5.000000000000000000
+                Position.X = 5.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 3
+                object TLabel
+                  StyleName = 'lblCodigo'
+                  Align = Client
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 80.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'C'#243'digo'
+                  TabOrder = 0
+                end
+              end
+              object TLayout
+                StyleName = 'layCidade'
+                Align = Right
+                Position.X = 437.000000000000000000
+                Size.Width = 170.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object TLabel
+                  StyleName = 'lblCidade'
+                  Align = Client
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 170.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'Cidade'
+                  TabOrder = 0
+                end
+              end
+              object TLayout
+                StyleName = 'layNome'
+                Align = Client
+                Size.Width = 352.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+                object TLabel
+                  StyleName = 'lblNome'
+                  Align = Client
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 352.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'Descri'#231#227'o'
+                  TabOrder = 0
+                end
+              end
+              object TLayout
+                StyleName = 'layUF'
+                Align = Right
+                Position.X = 607.000000000000000000
+                Size.Width = 50.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object TLabel
+                  StyleName = 'lblUF'
+                  Align = Client
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'UF'
+                  TabOrder = 0
+                end
+              end
+              object TLayout
+                StyleName = 'layBotoes'
+                Align = Right
+                Position.X = 657.000000000000000000
+                Size.Width = 150.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 4
+                object TLabel
+                  StyleName = 'lblUF'
+                  Align = Client
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 150.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'A'#231#245'es'
+                  TabOrder = 0
+                end
+              end
+            end
+          end
+        end
+      end
+      inherited tabCadastro: TTabItem
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        inherited lay_cadastro_principal: TLayout
+          Size.Width = 837.000000000000000000
+          Size.Height = 696.000000000000000000
+          inherited Rectangle2: TRectangle
+            Size.Width = 843.000000000000000000
+            Size.Height = 702.000000000000000000
+            inherited Rectangle4: TRectangle
+              Size.Width = 743.000000000000000000
+              Size.Height = 682.000000000000000000
+              inherited Layout8: TLayout
+                Size.Width = 733.000000000000000000
+                Size.Height = 572.000000000000000000
+                inherited Layout10: TLayout
+                  Size.Width = 733.000000000000000000
+                  inherited Label1: TLabel
+                    Size.Width = 713.000000000000000000
+                  end
+                  inherited Rectangle5: TRectangle
+                    Size.Width = 713.000000000000000000
+                  end
+                  inherited edtCodigo: TEdit
+                    Size.Width = 713.000000000000000000
+                  end
+                end
+                object Layout13: TLayout
+                  Align = Top
+                  Position.Y = 71.000000000000000000
+                  Size.Width = 733.000000000000000000
+                  Size.Height = 71.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object Label3: TLabel
+                    Align = Top
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Position.X = 10.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'Nome'
+                    TabOrder = 1
+                  end
+                  object Rectangle6: TRectangle
+                    Align = Client
+                    Enabled = False
+                    Fill.Color = claWhite
+                    HitTest = False
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 3.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 3.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 43.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFFC1C1C1
+                    XRadius = 5.000000000000000000
+                    YRadius = 5.000000000000000000
+                  end
+                  object edtNome: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    StyleLookup = 'Edit1Style1'
+                    TabOrder = 0
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 39.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Seu nome completo'
+                    CharCase = ecUpperCase
+                  end
+                end
+                object Layout15: TLayout
+                  Align = Top
+                  Position.Y = 142.000000000000000000
+                  Size.Width = 733.000000000000000000
+                  Size.Height = 71.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 2
+                  object Label7: TLabel
+                    Align = Top
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Position.X = 10.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'Cidade'
+                    TabOrder = 1
+                  end
+                  object Rectangle7: TRectangle
+                    Align = Client
+                    Enabled = False
+                    Fill.Color = claWhite
+                    HitTest = False
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 3.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 3.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 43.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFFC1C1C1
+                    XRadius = 5.000000000000000000
+                    YRadius = 5.000000000000000000
+                  end
+                  object edtCidade: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    StyleLookup = 'Edit1Style1'
+                    TabOrder = 0
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 39.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Sua cidade'
+                    CharCase = ecUpperCase
+                  end
+                end
+                object Layout16: TLayout
+                  Align = Top
+                  Position.Y = 213.000000000000000000
+                  Size.Width = 733.000000000000000000
+                  Size.Height = 71.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 3
+                  object Label8: TLabel
+                    Align = Top
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Position.X = 10.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'UF'
+                    TabOrder = 1
+                  end
+                  object Rectangle8: TRectangle
+                    Align = Client
+                    Enabled = False
+                    Fill.Color = claWhite
+                    HitTest = False
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 3.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 3.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 43.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFFC1C1C1
+                    XRadius = 5.000000000000000000
+                    YRadius = 5.000000000000000000
+                  end
+                  object edtUF: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    StyleLookup = 'Edit1Style1'
+                    TabOrder = 0
+                    Margins.Left = 10.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 713.000000000000000000
+                    Size.Height = 39.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Seu estado'
+                    CharCase = ecUpperCase
+                  end
+                end
+              end
+              inherited Layout11: TLayout
+                Position.Y = 632.000000000000000000
+                Size.Width = 743.000000000000000000
+                inherited Layout14: TLayout
+                  Position.X = 565.000000000000000000
+                  inherited rect_gravar: TRectangle
+                    OnClick = rect_gravarClick
+                    inherited Label6: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+                inherited Layout12: TLayout
+                  Position.X = 387.000000000000000000
+                  inherited rect_voltar: TRectangle
+                    OnClick = rect_voltarClick
+                    inherited Label5: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+              inherited Layout9: TLayout
+                Size.Width = 743.000000000000000000
+                inherited Label4: TLabel
+                  Size.Width = 743.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end
