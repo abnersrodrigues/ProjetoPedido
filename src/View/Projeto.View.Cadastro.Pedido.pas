@@ -461,6 +461,7 @@ begin
 
   if ((edt_codigo_pedido.Text = '') or (StrToIntDef(edt_codigo_pedido.Text, 0) <= 0)) then
   begin
+    FPedido.DtEmissao       := StrToDateDef(edt_dt_emissao_pedido.Text, now());
     edt_codigo_pedido.Text  := FPedidoController.Insert(FPedido).ToString;
     SetarTituloDadosPedido;
   end;
